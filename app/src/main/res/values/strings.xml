@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">LearningBasics</string>
+    <string name="contact_name">Hello Moto</string>
+    <string name="contact_phn">9000000006</string>
+    <string name="Next_btn">Next</string>
+    <string name="prev_btn">PREV</string>
+    <string name="image1">A Bird</string>
+    <string name="image2">A Droplet</string>
+    <string name="image3">A Cow</string>
+    <string name="image4">A Fox</string>
+    <string name="textview">Welcome to Gallery</string>
+    <string name="names_heading">NAMES</string>
+    <string name="phns_heading">CONTACT NO.</string>
+</resources>
