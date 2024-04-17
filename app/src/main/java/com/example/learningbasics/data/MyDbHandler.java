@@ -11,7 +11,9 @@ import android.util.Log;
 import androidx.annotation.Nullable;
 
 import com.example.learningbasics.model.Contacts;
+import com.example.learningbasics.model.Student;
 import com.example.learningbasics.parameters.Params;
+import com.example.learningbasics.parameters.SParams;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,7 +23,6 @@ public class MyDbHandler extends SQLiteOpenHelper {
     public MyDbHandler(@Nullable Context context) {
         super(context, Params.DB_NAME, null, Params.DB_VERSION);
     }
-
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
@@ -38,8 +39,10 @@ public class MyDbHandler extends SQLiteOpenHelper {
     }
 
     public void addContacts(Contacts contacts){
+
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         ContentValues values = new ContentValues();
+
         values.put(Params.KEY_NAME,contacts.getName());
         values.put(Params.KEY_PHONE,contacts.getPhone_num());
 
@@ -50,8 +53,8 @@ public class MyDbHandler extends SQLiteOpenHelper {
 
     public List<Contacts> getAllContacts(){
         List<Contacts> contactsList = new ArrayList<>();
-        SQLiteDatabase db = this.getReadableDatabase();
 
+        SQLiteDatabase db = this.getReadableDatabase();
 
         Cursor cursor = db.rawQuery(select,null);
 
@@ -69,6 +72,7 @@ public class MyDbHandler extends SQLiteOpenHelper {
         }
         return contactsList;
     }
+
 
     public int updateContactList(Contacts contact_update){
         String strings = String.valueOf(contact_update.getId());

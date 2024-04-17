@@ -14,21 +14,23 @@
         android:theme="@style/Theme.LearningBasics"
         tools:targetApi="31">
         <activity
-            android:name=".DataBase"
-            android:exported="true" >
-
+            android:name=".ViewStudentList"
+            android:exported="false" />
+        <activity
+            android:name=".StudentAdmission"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
         <activity
+            android:name=".DataBase"
+            android:exported="true" />
+        <activity
             android:name=".ImageSlideShow"
-            android:exported="true">
-
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".MyRecyclerView"
             android:exported="false" />

@@ -19,6 +19,7 @@ public class DataBase extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_data_base);
+
         MyDbHandler db = new MyDbHandler(DataBase.this);
 
         Contacts nandasu =new Contacts();

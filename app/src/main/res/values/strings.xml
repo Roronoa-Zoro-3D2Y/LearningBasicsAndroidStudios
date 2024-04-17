@@ -11,4 +11,9 @@
     <string name="textview">Welcome to Gallery</string>
     <string name="names_heading">NAMES</string>
     <string name="phns_heading">CONTACT NO.</string>
+    <string name="edit_name">Enter Student Name</string>
+    <string name="edit_id">Enter Student Id</string>
+    <string name="edit_dob">Enter Student DOB (DD/MM/YY)</string>
+    <string name="view_btn">VIEW</string>
+    <string name="add_btn">ADD</string>
 </resources>
