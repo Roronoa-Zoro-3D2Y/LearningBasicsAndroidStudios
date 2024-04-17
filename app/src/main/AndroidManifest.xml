@@ -14,6 +14,12 @@
         android:theme="@style/Theme.LearningBasics"
         tools:targetApi="31">
         <activity
+            android:name=".ActionsDialog"
+            android:exported="false" />
+        <activity
+            android:name=".GridActivity"
+            android:exported="true" />
+        <activity
             android:name=".ViewStudentList"
             android:exported="false" />
         <activity

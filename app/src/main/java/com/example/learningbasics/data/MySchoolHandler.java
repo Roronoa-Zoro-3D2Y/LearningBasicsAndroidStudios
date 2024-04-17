@@ -6,13 +6,12 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
-import android.widget.EditText;
 
 import androidx.annotation.Nullable;
 
+import com.example.learningbasics.ActionsDialog;
 import com.example.learningbasics.StudentAdmission;
 import com.example.learningbasics.model.Student;
-import com.example.learningbasics.parameters.Params;
 import com.example.learningbasics.parameters.SParams;
 
 import java.util.ArrayList;
@@ -133,6 +132,15 @@ public class MySchoolHandler extends SQLiteOpenHelper {
         long result = stu_db.insert(SParams.TABLE_NAME,null,values);
 
         return result != -1;
+
+    }
+
+    public void deleteById(int Stu_id){
+        SQLiteDatabase stu_db = this.getWritableDatabase();
+        stu_db.delete(SParams.TABLE_NAME,SParams.KEY_ID+"=?",
+                new String[]{String.valueOf(Stu_id)});
+
+        stu_db.close();
 
     }
 

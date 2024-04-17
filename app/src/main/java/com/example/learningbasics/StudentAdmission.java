@@ -13,6 +13,7 @@ import android.widget.Toast;
 import com.example.learningbasics.data.MySchoolHandler;
 import com.example.learningbasics.model.Student;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class StudentAdmission extends AppCompatActivity{
@@ -20,12 +21,16 @@ public class StudentAdmission extends AppCompatActivity{
     EditText enter_name,enter_id,enter_dob;
     AppCompatButton addBtn,viewBtn;
    boolean insertData;
+
+   ArrayList<Student> studentArrayList;
+
+    public MySchoolHandler school_1 = new MySchoolHandler(StudentAdmission.this);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.list_item_view);
 
-        MySchoolHandler school_1 = new MySchoolHandler(StudentAdmission.this);
+
 
         //Adding New Students to New School
         Student nanda = new Student(1, "Nanda Su", "01.06.2002");
@@ -98,7 +103,12 @@ public class StudentAdmission extends AppCompatActivity{
        Log.d("Testing3","Reached Here");
         if(insertData)
             Toast.makeText(this, "Insertion of New Record Successful!!", Toast.LENGTH_SHORT).show();
-        else
-            Toast.makeText(this, "Insertion Failed!!", Toast.LENGTH_SHORT).show();
+//        else
+//            Toast.makeText(this, "Insertion Failed!!", Toast.LENGTH_SHORT).show();
         }//on create
+    public void deleteRecords(int delete_id){
+        Intent intent = new Intent(StudentAdmission.this,ViewStudentList.class);
+        startActivity(intent);
+    }
+
 }

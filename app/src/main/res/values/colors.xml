@@ -8,4 +8,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="bluish">#2196F3</color>
+    <color name="purple">#9D28B1</color>
+    <color name="red_btn">#C4283B</color>
+    <color name="green_btn">#4CAF50</color>
 </resources>

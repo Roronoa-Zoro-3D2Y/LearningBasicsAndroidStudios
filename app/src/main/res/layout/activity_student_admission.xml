@@ -4,12 +4,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".StudentAdmission">
-
+    tools:context=".StudentAdmission"
+    android:orientation="vertical"
+    >
+<RelativeLayout
+    android:id="@+id/show"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
     <ListView
         android:id="@+id/stu_listview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         />
-
+<!--    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/actions_to_perform"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="120dp"
+        android:background="@drawable/action_btn_bg"
+        android:padding="5dp"
+        android:text="@string/action_btn_in_list"
+        android:textSize="16sp" />-->
+</RelativeLayout>
 </LinearLayout>

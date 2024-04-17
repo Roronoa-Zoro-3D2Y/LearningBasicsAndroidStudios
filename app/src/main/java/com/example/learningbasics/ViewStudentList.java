@@ -1,10 +1,19 @@
 package com.example.learningbasics;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
 
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.text.Layout;
 import android.util.Log;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -18,7 +27,11 @@ public class ViewStudentList extends AppCompatActivity {
     Student student;
     ArrayList<Student> studentArrayList;
     MySchoolHandler school_1 = new MySchoolHandler(ViewStudentList.this);
+    AppCompatButton delete_Btn;
 
+    Dialog dialog;
+
+    AlertDialog.Builder delete_confirm;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,5 +53,63 @@ public class ViewStudentList extends AppCompatActivity {
         listView = findViewById(R.id.stu_listview);
         listView.setAdapter(adapter);
 
-    }
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+                Student student = studentArrayList.get(i);
+                Toast.makeText(ViewStudentList.this, " name "+student.getStName(), Toast.LENGTH_SHORT).show();
+
+               /* Intent intent = new Intent(ViewStudentList.this,ActionsDialog.class);
+                intent.putExtra("Student_delete",i);
+                startActivity(intent);*/
+
+                // creating a dialog box
+
+                dialog = new Dialog(ViewStudentList.this);
+                dialog.setContentView(R.layout.activity_actions_dialouge);
+                dialog.setCancelable(false);
+                dialog.show();
+
+                delete_Btn = dialog.findViewById(R.id.delete_btn);
+                delete_confirm = new AlertDialog.Builder(ViewStudentList.this);
+
+                delete_Btn.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        delete_confirm.setTitle("Alert!!")
+                                .setMessage("Are you sure you want to delete "+student.getStName()+"'s record??")
+                                .setCancelable(true)
+                                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialogInterface, int i) {
+                                        school_1.deleteById(student.getStRoll());
+                                        finish();
+                                    }
+                                })
+                                .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialogInterface, int i) {
+                                        dialogInterface.cancel();
+                                    }
+                                })
+                                .show();
+                    }
+                });
+
+
+/*                ActionsDialog actionsDialog = new ActionsDialog(ViewStudentList.this,school_1,i);
+                actionsDialog.setCancelable(false);
+                actionsDialog.show();*/
+            }
+        });
+    }// on create
+
+
+
+/*    public void deleteRecords(int delete_id){
+        Student student1 = studentArrayList.get(delete_id);
+        Toast.makeText(this, "Are you sure you want to delete "+student1.getStName()+"'s Records", Toast.LENGTH_SHORT).show();
+    }*/
+
 }

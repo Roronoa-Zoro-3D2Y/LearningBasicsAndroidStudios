@@ -2,11 +2,11 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ViewStudentList"
     android:id="@+id/linear_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:weightSum="120"
-    tools:context=".ViewStudentList">
+    android:weightSum="120">
 
     <TextView
         android:id="@+id/stu_id_list"
@@ -14,7 +14,10 @@
         android:layout_height="match_parent"
         android:layout_weight="50"
         android:textSize="20sp"
-        android:textStyle="bold" />
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        />
 
     <TextView
         android:id="@+id/stu_name_list"
@@ -22,6 +25,7 @@
         android:layout_height="match_parent"
         android:layout_weight="30"
         android:textSize="20sp"
+        android:textColor="@color/purple_200"
         android:textStyle="bold" />
 
     <TextView
@@ -30,5 +34,7 @@
         android:layout_height="match_parent"
         android:layout_weight="40"
         android:textSize="20sp"
-        android:textStyle="bold" />
+        android:textColor="@color/black"
+        />
+
 </LinearLayout>

@@ -16,4 +16,9 @@
     <string name="edit_dob">Enter Student DOB (DD/MM/YY)</string>
     <string name="view_btn">VIEW</string>
     <string name="add_btn">ADD</string>
+    <string name="action_heading">what do you want to perform:</string>
+    <string name="action_delete">Delete Student Record</string>
+    <string name="action_add">Update Student Record</string>
+    <string name="add_hint">Enter Student ID</string>
+    <string name="action_btn_in_list">Actions</string>
 </resources>
