@@ -21,4 +21,14 @@
     <string name="action_add">Update Student Record</string>
     <string name="add_hint">Enter Student ID</string>
     <string name="action_btn_in_list">Actions</string>
+
+
+    <string name="text1">Nanda</string>
+    <string name="text2">Luffy</string>
+    <string name="text3">Miles</string>
+    <string name="text4">HERE</string>
+
+    <string name="temp">Temp Text</string>
+    <string name="animeTitle">Anime Name</string>
+    <string name="animeMainChara">Anime Main Character</string>
 </resources>

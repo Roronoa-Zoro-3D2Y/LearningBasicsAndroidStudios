@@ -1,27 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-             android:layout_height="match_parent">
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="100dp">
+    android:layout_height="100dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/contact_img"
+                android:id="@+id/anime_img"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_margin="20dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:src="@drawable/bingo_smiley"
+                />
 
             <TextView
-                android:id="@+id/contact_name"
+                android:id="@+id/anime_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
@@ -30,11 +29,11 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.296"
-                app:layout_constraintStart_toEndOf="@+id/contact_img"
+                app:layout_constraintStart_toEndOf="@+id/anime_img"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/contact_phn"
+                android:id="@+id/anime_mc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
@@ -43,12 +42,10 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.309"
-                app:layout_constraintStart_toEndOf="@+id/contact_img"
-                app:layout_constraintTop_toTopOf="@id/contact_name"
+                app:layout_constraintStart_toEndOf="@+id/anime_img"
+                app:layout_constraintTop_toTopOf="@id/anime_name"
 
                 app:layout_constraintVertical_bias="0.0" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </androidx.cardview.widget.CardView>
-
-</RelativeLayout>
+</androidx.cardview.widget.CardView>

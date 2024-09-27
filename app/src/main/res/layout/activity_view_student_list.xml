@@ -24,8 +24,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="30"
-        android:textSize="20sp"
+        android:contentDescription="@string/action_delete"
         android:textColor="@color/purple_200"
+        android:textSize="20sp"
         android:textStyle="bold" />
 
     <TextView
@@ -37,4 +38,11 @@
         android:textColor="@color/black"
         />
 
+<!--    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/more_Actions"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/more_actions"
+        android:contentDescription="@string/action_heading" />-->
 </LinearLayout>
